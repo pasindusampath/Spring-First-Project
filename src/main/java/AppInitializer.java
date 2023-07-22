@@ -8,6 +8,7 @@ public class AppInitializer {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
         Computer computer = (Computer) context.getBean("computer");
         System.out.println(computer.getBrandName());
+        System.out.println(computer.getProcessor().getProcessorName());
 
     }
 

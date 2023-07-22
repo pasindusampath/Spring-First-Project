@@ -3,7 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="processor" class="lk.ijse.gdse.test.dto.impl.ProcessorImpl"/>
     <bean id="computer" class="lk.ijse.gdse.test.dto.impl.ComputerImpl" scope="prototype" >
+        <constructor-arg ref="processor"></constructor-arg>
         <property name="price" value="2000"/>
         <property name="brand" value="ACER"/>
     </bean>
