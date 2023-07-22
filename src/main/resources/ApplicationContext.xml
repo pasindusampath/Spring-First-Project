@@ -3,8 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="priceCalc" class="PriceCalcImpl"/>
-    <bean id="fullstack" class="FullStackCourse">
-        <constructor-arg ref="priceCalc"/>
+    <bean id="computer" class="lk.ijse.gdse.test.dto.impl.ComputerImpl" scope="prototype" >
+        <property name="price" value="2000"/>
+        <property name="brand" value="ACER"/>
     </bean>
+    <!--<bean id="fullstack" class="FullStackCourse">
+        <constructor-arg ref="priceCalc"/>
+    </bean>-->
 </beans>
