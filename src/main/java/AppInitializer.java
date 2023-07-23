@@ -12,6 +12,7 @@ public class AppInitializer {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
         Computer computer = context.getBean("computerImpl", ComputerImpl.class);
         System.out.println(computer.getProcessor().getProcessorName());
+        System.out.println(computer.getBrandName());
     }
 
 }
